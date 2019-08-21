@@ -9,6 +9,8 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
+
+    [Authorize]
     public class CustomersController : Controller
     {
         private ApplicationDbContext _context;
@@ -23,6 +25,7 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
         // GET: Customer
+       
         public ActionResult Index()
         {
             // var customers = GetCustomers();
